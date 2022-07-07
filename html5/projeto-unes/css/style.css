@@ -1,0 +1,132 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgba(109, 120, 168, 0.1);
+}
+
+/* CONTAINER */
+.container{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.container--flex{
+    display: flex;
+}
+
+.flex--btw{
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER */
+.logo{
+    margin: 1rem 0;
+}
+
+/* Nav */
+nav ul{
+    display: flex;
+}
+nav li{
+    padding: 0 .5rem;
+}
+
+/* box--section */
+.box--section{
+    padding: 1rem 0;
+}
+
+.box--section h2{
+    padding: 1rem 0;
+}
+
+.box--section p{
+    line-height: 1.5em;
+    padding: 1rem 0;
+}
+
+.box--section ol{
+    padding-left: 1rem;
+}
+
+.hr{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* FORMULÁRIO DE CONTATO */
+
+form{
+    max-width: 900px;
+    margin: 2rem 0;
+}
+
+fieldset{
+    border-radius: .25rem;
+    padding: 1rem 0 ;
+}
+
+legend{
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0 .3rem;
+}
+
+input, textarea{
+    margin: .75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .75em;
+}
+
+label{
+    margin: 0 .75rem;
+    font-weight: 600;
+}
+
+input{
+    width: 95%;
+    padding: .75rem;
+}
+
+input[type="submit"]{
+    border: none;
+    background: rgba(109, 120, 168, 0.1);
+    border-radius: .25rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover{
+    background: rgba(109, 120, 168, 0.3);
+}
+
+textarea{
+    width: 95%;
+}
+
+/* FOOTER */
+
+footer{
+    margin: 2rem 0;
+}
+
+footer p{
+    text-align: center;
+}
