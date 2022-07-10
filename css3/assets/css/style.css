@@ -1,0 +1,98 @@
+/* AULA DE CSS */
+
+
+
+/* AULA SOBRE SELETORES */
+
+/* h1{
+    color: red;
+}
+
+h2{
+    color: green;
+    font-size: 25px;
+}
+
+span{
+    font-size: 18px;
+    text-decoration: underline;
+    display: block;
+}
+
+p{
+    width: 500px;
+    color:darkcyan;
+
+    display: inline-block;
+}
+
+p::first-line{
+    color: blue;
+}
+
+p::first-letter{
+    color: brown;
+    font-size: 20px;
+    font-weight: 600;
+} */
+
+
+/* AULA SOBRE CLASSE E ID'S */
+
+.titulo--h2{
+    color: blue;
+    text-transform: uppercase;
+}
+
+
+.conteudo p{
+    width: 500px;
+    display: inline-block;
+}
+
+/* .texto{
+    font-weight: 600;
+}
+
+.espacamento{
+    line-height: 25px;
+}
+
+.espacamento--letra{
+    letter-spacing: 10px;
+} */
+
+.conteudo p:nth-child(1){
+    color: red;
+}
+.conteudo p:nth-child(2){
+    color: green;
+}
+.conteudo p:nth-child(3){
+    color: brown;
+}
+
+
+/* ID's */
+
+#box--conteudo{
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+#box--conteudo p{
+    width: 500px;
+    display: block;
+    text-align: center;
+
+    margin: 0 auto;
+
+    padding: 5px 20px;
+    line-height: 25px;
+    color: brown;
+}
+#box--titulo{
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
