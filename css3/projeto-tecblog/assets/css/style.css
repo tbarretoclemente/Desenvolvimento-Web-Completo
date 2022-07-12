@@ -22,8 +22,11 @@ img{
 
 :root{
     /* base color */
-
-    
+    --bg--color:#f4f4f4;
+    --texto: #000;
+    --titulo--h1:#4e4e4e;
+    --titulo--h2: #f7b600;
+    --titulo--h2: #565656;;
 }
 
 
