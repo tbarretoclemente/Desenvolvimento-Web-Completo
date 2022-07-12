@@ -1,0 +1,86 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../image/fundo.png);
+    max-width: 900px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* HEADER */
+.container{
+    margin: .5rem;
+}
+
+/* HEADER NAV */
+
+nav ul{
+    /* width: 900px; */
+    /* border: 1px solid red; */
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 1rem 0;
+}
+
+nav ul li a{
+    color: #4b566a;
+    font-size: 1.5em;
+    padding-right: 2rem;
+    font-weight: 600;
+}
+
+
+/* MAIN */
+
+section{
+    background: #e8e8d9;
+    padding: 1rem;
+}
+
+section h1, p{
+    padding: 1rem 0;
+}
+
+section h1{
+    color: #828271;
+    font-size: 2em;
+}
+
+section p{
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+
+section img{
+    border: 8px outset #c3c3ae;
+}
+
+/* FOOTER */
+
+footer{
+    text-align: center;
+}
+
+footer p{
+    font-size: 1.2em;
+}

@@ -39,7 +39,7 @@ p::first-letter{
 
 /* AULA SOBRE CLASSE E ID'S */
 
-.titulo--h2{
+/* .titulo--h2{
     color: blue;
     text-transform: uppercase;
 }
@@ -48,7 +48,7 @@ p::first-letter{
 .conteudo p{
     width: 500px;
     display: inline-block;
-}
+} */
 
 /* .texto{
     font-weight: 600;
@@ -62,7 +62,7 @@ p::first-letter{
     letter-spacing: 10px;
 } */
 
-.conteudo p:nth-child(1){
+/* .conteudo p:nth-child(1){
     color: red;
 }
 .conteudo p:nth-child(2){
@@ -70,12 +70,12 @@ p::first-letter{
 }
 .conteudo p:nth-child(3){
     color: brown;
-}
+} */
 
 
 /* ID's */
 
-#box--conteudo{
+/* #box--conteudo{
     background-color: cadetblue;
     padding: 10px;
 }
@@ -95,4 +95,292 @@ p::first-letter{
     color: black;
     font-weight: 600;
     text-align: center;
+} */
+
+
+
+/*AULA DE DIV E SPAN */
+
+.box--1, .box--2, .box--3{
+    padding: 1rem;
+    color: white;
+}
+
+.box--1{
+    background-color: darkblue;
+}
+.box--2{
+    background-color: darkcyan;
+}
+.box--3{
+    background-color: darkgoldenrod;
+}
+
+.span{
+    background-color: brown;
+    padding: 1rem;
+    color: white;
+}
+
+/* AULA DE BORDA */
+
+.container--borda{
+    margin: 1rem ;
+}
+
+.borda--1, .borda--2, .borda--3, .borda--4, .borda--5{
+    margin: 1rem 0;
+    padding: .5rem;
+}
+
+.borda--1{
+    border: 5px solid darkblue;
+}
+.borda--2{
+    border: 5px dotted darkcyan;
+}
+.borda--3{
+    border: 5px double darkgoldenrod;
+}
+.borda--4{
+    border: 5px groove darkgreen;
+}
+
+.borda--5{
+    border-width: .4rem;
+    border-color: darkmagenta darkolivegreen darkorange darkred;
+    border-style: outset;
+}
+
+/* AULA FONTE E CORES */
+
+.fonte--cor--1{
+    color: darkblue;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-style: oblique;
+}
+.fonte--cor--2{
+    color: darkcyan;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+.fonte--cor--3{
+    color: darkblue;
+    font-size: 21px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+/* AULA DE TAMANHO DE TEXTO */
+
+.texto--1{
+    font-size: 1.2em;
+    color: darkblue;
+}
+.texto--2{
+    font-size: 25px;
+    color: darkred;
+}
+.texto--3{
+    font-size: 2em;
+    color: darkgreen;
+}
+
+
+/* AULA DE ESTILO DE TEXTO */
+
+.estilo--texto--1{
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: overline;
+}
+.estilo--texto--2{
+    font-weight: bolder;
+    font-style: oblique;
+    text-decoration: underline;
+    
+}
+.estilo--texto--3{
+    font-weight: lighter;
+    font-style: normal;
+    text-decoration: line-through;
+
+}
+
+/* AULA DE CORES E IMAGEM DE FUNDO */
+
+.bg--1, .bg--2, .bg--3{
+    width: 600px;
+    height: 220px;
+}
+
+.bg--1{
+    background: url(../image/1.jpg) darkblue;
+}
+.bg--2{
+    background: url(../image/2.jpg) darkcyan;
+}
+.bg--3{
+    background: url(../image/3.jpg) darkgoldenrod;
+}
+
+/* AULA DE MODELO DE CAIXA */
+
+.modelo--caixa--1, .modelo--caixa--2{
+    margin: 1rem 0;
+    width: 150px;
+}
+
+.modelo--caixa--1{
+    border: 3px solid darkblue;
+    padding: 1rem;
+}
+
+.modelo--caixa--2{
+    border: 3px solid darkgreen;
+    padding: 1rem;
+}
+
+
+/* AULA DE ELEMENTOS FLUTUANTES */
+
+.limpa--float{
+    clear: both;
+}
+
+.elemento--flutuante--1, .elemento--flutuante--2, .elemento--flutuante--3{
+    margin: 1rem;
+    padding: 1rem;
+    width: 150px;
+    float: left;
+}
+.elemento--flutuante--4, .elemento--flutuante--5, .elemento--flutuante--6{
+    margin: 1rem;
+    padding: 1rem;
+    width: 150px;
+    float: right;
+}
+
+.elemento--flutuante--1, .elemento--flutuante--4{
+    border: 3px solid darkblue;
+}
+.elemento--flutuante--2, .elemento--flutuante--5{
+    border: 3px solid darkgreen;
+}
+.elemento--flutuante--3, .elemento--flutuante--6{
+    border: 3px solid darkred;
+}
+
+.texto--float--right{
+    text-align: right;
+}
+
+/* AULA DE ELEMENTOS INLINE E BLOCK */
+
+.elemento-block--1, .elemento-block--2{
+    background-color: darkgreen;
+    color: white;
+}
+
+.elemento--inline--1, .elemento--inline--2{
+    background-color: darkmagenta;
+    color: white;
+    padding: 1rem;
+}
+
+
+/* AULA DE POSICIONAMENTO ESTATICO RELATIVO ABSOLUTO FIXO*/
+
+
+.container--Estatico{
+    position: static;
+
+}
+
+.container--fixo{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.menu--estatico ul, .menu--fixo ul{
+    list-style: none;
+    display: flex;
+    background-color: darkcyan;
+}
+
+.menu--estatico ul li, .menu--fixo ul li{
+    padding: 1rem;
+}
+
+.menu--estatico ul li a, .menu--fixo ul li a{
+    color: white;
+}
+
+
+.container--absoluto p{
+    width: 500px;
+    padding: .75rem;
+}
+
+.posicionamento--absoluto{
+    position: absolute;
+    left: 0%;
+    bottom: -50%;
+    right: 0%;
+
+    border: 1px solid rebeccapurple;
+}
+
+/* AULA DE SOBREPOSIÇÂO */
+
+.sobrepondo--1, .sobrepondo--2, .sobrepondo--3{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rebeccapurple;
+    position: absolute;
+    color: white;
+}
+
+.sobrepondo--1{
+    z-index: 0;
+    background-color: darkblue;
+}
+.sobrepondo--2{
+    z-index: 1;
+    left: 50px;
+    top: 150px;
+    background-color: darkcyan;
+    
+}
+.sobrepondo--3{   
+    z-index: 2;
+    left: 100px;
+    top: 200px;
+    background-color: darkgoldenrod;
+}
+
+/* AULA SOBRE FORMATAÇÃO DE LINKS */
+
+.container--link a{
+    font-size: 20px;
+}
+
+.link--nao--visitado:link{
+    color: darkorange;
+}
+
+.link--visitado:visited{
+    color: darkblue;
+}
+
+.link--hover:hover{
+    color: darkviolet;
+}
+
+.link--active{
+    color: darkgreen;
 }
