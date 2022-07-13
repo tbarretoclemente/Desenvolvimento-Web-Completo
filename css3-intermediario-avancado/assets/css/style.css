@@ -1,0 +1,133 @@
+/* RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+/* Seletores de titulos */
+
+body{
+    margin: 1rem;
+}
+ ul{
+list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*
+ul li{
+    padding: .5rem 0;
+    
+} */
+
+/* SELETOR TITULO */
+
+/* h1{
+    color: darkblue;
+}
+h2{
+    color: darkgoldenrod;
+}
+h3{
+    color: darkcyan;
+}
+
+.cor--verde{
+    color: darkgreen;
+}
+
+p.verde{
+    color: darkgreen;
+} */
+
+/* SELETOR ID */
+
+/* #seletor--id{
+    width: 150px;
+    height: 150px;
+    border: 1px solid darkblue;
+} */
+/* SELETOR FILHO */
+
+/* ol{
+    margin: 0 1rem;
+}
+
+ol>li>a{
+    color: darkgoldenrod;
+} */
+
+/*  SELETOR descendente*/
+
+/* p a{
+    color: darkgreen;
+}
+
+h2+p{
+    color: darkmagenta;
+}
+h2~span{
+    color: darkorange;
+} */
+
+/* HERENÇA E ESPECIFICIDADE */
+
+h2 {/*3*/
+    color: blue;
+}
+
+h2.verde {/*2*/
+    color: green;
+}
+
+h2#amarelo {/*1*/
+    color: yellow;
+}
+
+
+/* BARRA DE NAVEGAÇÃO VERTICAL */
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    /* padding: 1rem; */
+    /* background: url(../image/seta.png) no-repeat left center; */
+    border: 1px solid #fff;
+}
+
+nav a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    background: url(../image/menu.png) no-repeat #f7b600;
+    text-indent: 40px;
+    line-height: 40px;
+    color: #fff;
+}
+
+nav a:hover{
+    background-position: right bottom;
+    background: #f99200;
+
+}
+
+/* ACTIVE / SELECIONADO */
+/* nav a, .selecionado a{
+    background-position: right bottom;
+    background: #f99200;
+    color: #fff;
+} */
+
+#home .home a{
+    background-position: right bottom;
+    background: #f99200;
+    color: black;
+}

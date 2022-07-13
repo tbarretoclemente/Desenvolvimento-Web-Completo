@@ -5,9 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Aula Css - Seletores</title>
 </head>
 <body>
-    
+    <h1>Aula de Seletores Css</h1>
+
+    <ul>
+        <li>*{} - Seleciona todos os elementos da página</li>
+        <li>H1, h2, h3 {} - Seleciona os elementos h1,h2,h3...</li>
+        <li>.cor--verde{} - Seleciona qualquer elemento cujo atributo class tem o valor “verde”</li>
+        <li>p.verde{} - Seleciona somente elemento cujo atributo class tem o valor “verde”</li>
+        <li>#cabecalho{} - Seleciona o elemento cujo atributo id tem o valor “cabecalho”</li>
+        <li>li>a {} - Seleciona quaisquer elementos que são filhos de um elemento (mas não outros elementos a na página)</li>
+        <li>p a {} - Seleciona quaisquer elementos que residem dentro de um elemento, mesmo e houver outros elementos aninhados entre eles</li>
+        <li>h1+p {} - Seleciona o primeiro elemento depois de qualquer elemento (mas não outros elementos p)</li>
+        <li>h1~p {} - Se houvesse dois elementos que fossem irmãos de um elemento, essa regra se aplicaria ao dois</li>
+    </ul>
+    <br>
+    <h2>Seletores de Titulos</h2>
+    <br>
+
+    <div class="seletor--titulo">
+        <h1>Titulo h1</h1>
+        <h2>Titulo h2</h2>
+        <h3>Titulo h3</h3>
+    </div>
+
+    <hr>
+
+    <div class="seletor--classe">
+        <h2>Seletor de classe</h2>
+        <h3 class="cor--verde">Trocando a cor para verde</h3>
+        
+        <p class="verde">Trocando cor do paragráfo para verde</p>
+    </div>
+
+    <hr>
+
+    <h2>Seletor ID</h2>
+
+    <div id="seletor--id">
+        Seletor ID
+    </div>
+
+    <hr>
+
+    <div class="seletor--filho">
+        <h2>Seletor Filho</h2>
+        <ol>
+            <li><a href="">Seletor filho</a></li>
+            <li><a href="">Seletor filho</a></li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <h2>Seletor Descendente</h2>
+    <div class="seletor--descendente">
+        <p><a href="">Seletor descendente</a></p>
+    </div>
+
+    <hr>
+
+    <div class="seletor--adjacente">
+        <h2>Seletor Adjacente</h2>
+        <p>seletor Adjacente irmão</p>
+    </div>
+
+    <hr>
+
+    <div class="seletor--geral">
+        <h2>Seletor Geral</h2>
+        <span>seletor irmão geral</span>
+    </div>
 </body>
 </html>
