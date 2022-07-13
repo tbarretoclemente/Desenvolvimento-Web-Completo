@@ -12,7 +12,9 @@ body{
     margin: 1rem;
 }
  ul{
-list-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a{
@@ -92,18 +94,16 @@ h2#amarelo {/*1*/
 
 /* BARRA DE NAVEGAÇÃO VERTICAL */
 
-nav ul{
+/* nav ul{
     margin: 0;
     padding: 0;
 }
 
 nav li{
-    /* padding: 1rem; */
-    /* background: url(../image/seta.png) no-repeat left center; */
     border: 1px solid #fff;
-}
+} */
 
-nav a{
+/* nav a{
     width: 200px;
     height: 40px;
     display: block;
@@ -116,8 +116,8 @@ nav a{
 nav a:hover{
     background-position: right bottom;
     background: #f99200;
-
-}
+    
+} */
 
 /* ACTIVE / SELECIONADO */
 /* nav a, .selecionado a{
@@ -126,8 +126,69 @@ nav a:hover{
     color: #fff;
 } */
 
-#home .home a{
+/* #home .home a{
     background-position: right bottom;
     background: #f99200;
     color: black;
+} */
+
+
+/* BARRA DE NAVEGAÇÃO HORIZONTAL */
+
+/* nav ul{
+    margin: 1rem 0;
+    background-color: darkgrey;
+    width: 600px;
+}
+nav ul li{
+    display: inline-block;
+    padding: .5rem;
+}
+
+nav ul li a{
+    color: #000;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover, nav ul li:hover{
+    color: #fff;
+    background-color: darkgreen;
+}
+
+nav li.active, .active a{
+    color: #fff;
+    background-color: darkgreen;
+
+} */
+
+
+/* BARRA DE NAVEGAÇÃO COM ABAS */
+
+nav ul{
+    width: 720px;
+}
+
+nav ul li{
+    float: left;
+    background: url(../image/aba-direita.png) no-repeat top right;
+}
+
+nav ul li a{
+    display: block;
+    padding: 0 2rem;
+    line-height: 3em;
+    background: url(../image/aba-esquerda.png) no-repeat top left;
+    color: #fff;
+}
+
+nav ul a:hover{
+    color: #894a1f;
+}
+
+nav ul .active{
+    background: url(../image/aba-direita-atual.png) no-repeat top right;
+}
+
+nav ul .active a{
+    background: url(../image/aba-esquerda-atual.png) no-repeat top left;
 }
