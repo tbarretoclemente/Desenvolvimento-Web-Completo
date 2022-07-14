@@ -9,7 +9,9 @@
 /* Seletores de titulos */
 
 body{
-    margin: 1rem;
+    margin: 0 auto;
+    max-width: 980px;
+    width: 980px;
 }
  ul{
     list-style: none;
@@ -79,17 +81,17 @@ h2~span{
 
 /* HERENÇA E ESPECIFICIDADE */
 
-h2 {/*3*/
+/* h2 {
     color: blue;
 }
 
-h2.verde {/*2*/
+h2.verde {
     color: green;
 }
 
-h2#amarelo {/*1*/
+h2#amarelo {
     color: yellow;
-}
+} */
 
 
 /* BARRA DE NAVEGAÇÃO VERTICAL */
@@ -164,7 +166,7 @@ nav li.active, .active a{
 
 /* BARRA DE NAVEGAÇÃO COM ABAS */
 
-nav ul{
+/* nav ul{
     width: 720px;
 }
 
@@ -191,4 +193,76 @@ nav ul .active{
 
 nav ul .active a{
     background: url(../image/aba-esquerda-atual.png) no-repeat top left;
+} */
+
+/* AULA DE Layout Fixo */
+.container{
+    float: left;
+}
+
+
+#header--fixo{
+    background: darkblue;
+    height: 100px;
+}
+
+#header--fixo h1{
+    color: #fff;
+    text-align: center;
+    padding: .95rem 0;
+}
+
+#header--fixo h3{
+    color: #fff;
+    text-align: center;
+}
+#main--fixo{
+    /* border: 1px solid red; */
+}
+.nav--fixo{
+    background-color: darkgray;
+    width: 250px;
+    height: auto;
+}
+
+.nav--fixo ul li{
+    padding: .6rem;
+}
+.nav--fixo ul li a{
+    font-size: 18px;
+}
+.section--fixo{
+    width: 466px;
+    padding: 1rem;
+}
+.article--fixo{
+    padding: .5rem 0;
+}
+.article--fixo h2{
+    padding: .5rem 0;
+}
+.article--fixo p{
+    line-height: 1.5em;
+}
+
+.aside--fixo{
+    width: 200px;
+    background-color: darkgray;
+    height: auto;
+    padding: 1rem;
+}
+
+.limpar--float{
+    clear: both;
+}
+#footer--fixo{
+    background-color: darkblue;
+    height: 80px;
+}
+
+#footer--fixo p{
+    text-align: center;
+    color: #fff;
+    padding: 2rem 0;
+    font-size: 18px;
 }
