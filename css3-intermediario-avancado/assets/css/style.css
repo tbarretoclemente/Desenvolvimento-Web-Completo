@@ -8,7 +8,7 @@
 
 /* Seletores de titulos */
 
-body{
+#body{
     margin: 0 auto;
     max-width: 980px;
     width: 980px;
@@ -265,4 +265,79 @@ nav ul .active a{
     color: #fff;
     padding: 2rem 0;
     font-size: 18px;
+}
+
+/* AULA DE Layout FLUIDO */
+
+.container--fluido{
+    /* float: left; */
+}
+
+#body--fluido{
+    max-width: 100%;
+    /* width: 95%; */
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+#header--fluido{
+    background-color: darkblue;
+    text-align: center;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+#main--fluido{}
+
+.nav--fluido{
+    background-color: darkgray;
+    width: 15%;
+    float: left;
+    padding: 1rem;
+}
+
+.nav--fluido ul li{
+    padding: .5rem;
+}
+
+.nav--fluido ul li a{
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.section--fluido{
+    width: 60%;
+    float: left;
+    margin: 0 auto;
+}
+
+.article--fluido{
+    margin: 1rem;
+}
+
+.aside--fluido{
+    background-color: darkgray;
+    width: 20%;
+    float: right;
+    padding: 1rem;
+}
+
+.aside--fluido h3{
+    padding: .5rem 0;
+}
+
+.aside--fluido p{
+    line-height: 1.4em;
+}
+
+#footer--fluido{
+    background-color: darkblue;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#footer--fluido p{
+    color: #fff;
+    font-size: 1.2em;
+
 }
