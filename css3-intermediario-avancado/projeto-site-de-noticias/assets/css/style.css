@@ -1,0 +1,88 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff url(../image/fundo.png) repeat-x;
+}
+
+/* CONTAINER's */
+.container--Center{
+    width: 750px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header{
+    height: 190px;
+    /* border: 1px solid red; */
+    
+}
+
+.logo{
+    width: 152px;
+    height: 66px;
+    background: url(../image/logo.png) no-repeat center;
+}
+
+.sub--Logo{
+    background: url(../image/detalhe-topo.png) no-repeat right top;
+    height: 190px;
+    margin-top: -60px;
+}
+
+
+/* NAV - MENU PRINCIPAL */
+.menu--principal{
+    margin-top: -70px;
+}
+
+.menu--principal {
+    background: #b10333;
+    float: left;
+}
+
+.menu--principal  li{
+    float: left;
+}
+
+.menu--principal li a{
+    font-size: .9em;
+    display: block;
+    padding: .5em 1.5em;
+    color: #fff;
+    background: url(../image/divisor.png) no-repeat left center;
+}
+
+.menu--principal .primeiro a{
+    background: none;
+}
+
+.menu--principal a:hover{
+    color: #69001d;
+}
+
+
+
+/* MAIN */
+/* FOOTER */
