@@ -7,31 +7,114 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Notícias Cidade</title>
 </head>
-<body class="home">
+<body id="" class="home--Active">
     <div class="container--Center">
-        <header>
-            <div class="logo"></div>
-            <div class="sub--Logo"></div>
+        <header id="topo">
+            <h1 class="logo">Notícias Cidade</h1>
 
-            <nav id="navegacao">
-                <ul class="menu--principal">
-                    <li class="primeiro"><a id="home" href="#">Home</a></li>
-                    <li><a id="brasil" href="#">Brasil</a></li>
-                    <li><a id="internacional" href="#">Internacional</a></li>
-                    <li><a id="economia" href="#">Economia</a></li>
-                    <li><a id="saude" href="#">Saúde</a></li>
-                    <li><a id="ciencia" href="#">Ciência</a></li>
-                    <li><a id="fotos" href="#">Fotos</a></li>
-                </ul>
-            </nav>
+            <ul id="navegacao">
+                <li class="primeiro"><a id="home" href="/css3-intermediario-avancado/projeto-site-de-noticias/index.html">Home</a></li>
+                <li><a id="brasil" href="/css3-intermediario-avancado/projeto-site-de-noticias/brasil.html">Brasil</a></li>
+                <li><a id="internacional" href="/css3-intermediario-avancado/projeto-site-de-noticias/internacional.html">Internacional</a></li>
+                <li><a id="economia" href="/css3-intermediario-avancado/projeto-site-de-noticias/economia.html">Economia</a></li>
+                <li><a id="saude" href="/css3-intermediario-avancado/projeto-site-de-noticias/saude.html">Saúde</a></li>
+                <li><a id="ciencia" href="/css3-intermediario-avancado/projeto-site-de-noticias/ciencia.html">Ciência</a></li>
+                <li><a id="fotos" href="/css3-intermediario-avancado/projeto-site-de-noticias/fotos.html">Fotos</a></li>
+            </ul>
+
         </header>
 
     </div>
 
     <main>
+        <div class="container--Center margin--top">
+            <section id="primario">
+                <div class="box--Padrao destaque">
+                    <h2>Destaque</h2>
+
+                    <div class="box--Padrao--Conteudo">
+                        <h3>Nova legislação</h3>
+                        <img src="assets/image/taxi.jpg" alt="imagem de um taxi amarelo">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <a href="#">Leia mais</a>
+                    </div>
+                </div>
+
+                <div class="box--Padrao">
+                    <h2>Mundo   </h2>
+
+                    <div class="box--Padrao--Conteudo">
+                        <ul id="lista--Noticias">
+                            <li>
+                                <a href="#">
+                                    <img src="assets/image/tecnologia.jpg" alt="imagem de tecnlogia">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="secundario">
+                <div class="box--Padrao ultima--Entrevista">
+                    <h2>Última entrevista</h2>
+
+                    <div class="box--Padrao--Conteudo">
+                        <h3>entrevista com felipe silva</h3>
+                        <img src="assets/image/doutor.jpg" alt="imagem de um médico">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <a href="#">Leia mais</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="lateral">
+                <div class="box--Padrao">
+                    <h2>Entrevistas</h2>
+
+                    <div class="box--Padrao--Conteudo">
+                        <ul>
+                            <li><a href="#">José Almeida</a></li>
+                            <li><a href="#">Felipe Silva</a></li>
+                            <li><a href="#">Renato Rodrigues</a></li>
+                            <li><a href="#">Alberto Silveira</a></li>
+                            <li><a href="#">André Carlos</a></li>
+                            <li><a href="#">Márcio Mello</a></li>
+                            <li><a href="#">João Pedro</a></li>
+                            <li><a href="#">Fernando Weiss</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="box--Padrao">
+                        <h2>News</h2>
+    
+                        <div class="box--Padrao--Conteudo">
+                            <form action="">
+                                <div>
+                                    <label for="email">E-mail</label>
+                                    <input type="email" name="email" id="email" placeholder="Digite o seu email">
+                                </div>
+
+                                <div>
+                                    <input type="submit" value="Cadastrar" name="cadastrar">
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </section>
+
+        </div>
         
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="container--Center">
+            &copy;Copyright 2020 - Notícias Cidade
+        </div>
+    </footer>
 </body>
 </html>
