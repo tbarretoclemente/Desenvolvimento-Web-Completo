@@ -100,7 +100,7 @@ h3{
 /* ACTIVE  */
 
 body.home--Active #navegacao a#home,
-body.brasil--Active--Active #navegacao a#brasil,
+body.brasil--Active #navegacao a#brasil,
 body.internacional--Active #navegacao a#internacional,
 body.economia--Active #navegacao a#economia,
 body.saude--Active #navegacao a#saude,
@@ -166,10 +166,6 @@ body.fotos--Active #navegacao a#fotos{
     margin: 5px 0;
 }
 
-.box--Padrao--Conteudo img{
-    width: 80px;
-}
-
 #lateral ul a{
     font-size: .9em;
     padding: 3px;
@@ -222,6 +218,38 @@ input[type="submit"]{
 .ultima--Entrevista h3{
     background-color: #b10333;
     color: #000;
+}
+
+/* LISTA Noticias */
+
+#lista--Noticias img{
+    width: 80px;
+}
+
+#lista--Noticias li{
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 65px;
+}
+
+#lista--Noticias li a img{
+    float: left;
+    margin: 2px;
+}
+
+#lista--Noticias li h3{
+    font-size: .8em;
+    color: #3e7ab9;
+}
+
+#lista--Noticias li p{
+    font-size: .7em;
+    color: #000;
+}
+
+#lista--Noticias li:hover{
+    background: #eee;
+    cursor: pointer;
 }
 
 /* FOOTER */
