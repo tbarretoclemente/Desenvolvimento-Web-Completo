@@ -143,17 +143,22 @@ ul.navegacao{
 
 /* MAIN */
 
-.area-Principal{
-    float: left;
+main{
+    background: url(../image/bg-container.png) repeat-y;
+}
+
+.area--Principal, .area--Lateral{
     width: 50%;
+}
+
+.area--Principal{
+    float: left;
+}
+.area--Lateral{
+    float: right;
 }
 
 .area--Conteudo{
     margin: 0 auto;
     width: 90%;
-}
-
-.area--Lateral{
-    float: right;
-    width: 50%;
 }
