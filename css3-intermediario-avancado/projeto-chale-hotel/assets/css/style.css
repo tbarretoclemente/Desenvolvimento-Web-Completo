@@ -28,7 +28,7 @@ body{
 /* CONTAINER */
 
 .container--Center{
-    background: #ede9cc;
+    background: #ede9cc url(../image/bg-container.png) top center repeat-y;
     margin: 0 auto;
     min-width: 740px;
     max-width: 1180px;
@@ -138,4 +138,22 @@ ul.navegacao{
     width: 226px;
     height: 164px;
     float: right;
+}
+
+
+/* MAIN */
+
+.area-Principal{
+    float: left;
+    width: 50%;
+}
+
+.area--Conteudo{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.area--Lateral{
+    float: right;
+    width: 50%;
 }
