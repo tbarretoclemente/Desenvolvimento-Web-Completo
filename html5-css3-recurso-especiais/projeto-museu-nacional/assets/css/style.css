@@ -1,0 +1,255 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body{
+    background: var(--background) url(../image/fundo.png) repeat-x;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+/* ROOT */
+:root{
+    /* Base de Cores */
+    --background: #f4f2ec;
+    --background--2:#cdc8b1;
+    --background--Aside:##ebe7dd;
+    --texto: #af670a;
+    --titulo--h3: #227115;
+    --titulo--h4:#86521a;
+}
+
+
+/* CONTAINER */
+
+.container--Center{
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.container--Flex{
+    display: flex;
+}
+
+
+/* HEADER */
+header{
+    height: 3.45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;
+}
+
+
+/* LOGO */
+.box--Logo a{
+    background: url(../image/logo.png) no-repeat;
+    width: 248px;
+    height: 21px;
+    display: block;
+    text-indent: -3000px;
+    color: var(--texto);
+    font-size: 2em;
+}
+
+.box--Logo a span{
+    color: #fff;
+}
+/* NAVEGAÇÃO */
+
+.box--Menu{
+    color: white;
+    /* border: 1px solid green; */
+}
+
+.box--Menu nav ul{
+    display: flex;
+    list-style: none;
+}
+.box--Menu nav li{
+    padding: 0 1rem;
+}
+.box--Menu nav li a{
+    color: var(--texto);
+    text-transform: uppercase;
+    font-size: .95em;
+    padding-bottom: .5rem;
+    font-weight: 400;
+}
+
+.box--Menu nav li a:hover, .conteudo--Exposicao ul li a:hover{
+    color: var(--titulo--h3);
+    border-bottom: 1px solid var(--background--2);
+    transition: all .3s;
+}
+
+/*SECTION BOX HERO */
+
+.box--Hero{
+    display: flex;
+    gap: 1.35rem;
+    flex-grow: auto;
+    margin: 3rem 0;
+}
+
+/* .box--Hero--Image{}
+.box--Hero--Image--1{} */
+
+
+/* SECTION CONTEUDO */
+
+.section--Conteudo{
+    display: flex;
+    margin-top: -3.25rem;
+}
+
+.box--Conteudo{
+    /* border: 1px solid red; */
+    padding: 1rem;
+}
+
+.box--Conteudo h3{
+    color: var(--titulo--h3);
+    text-transform: uppercase;
+    font-size: 1em;
+    padding-bottom: .93rem;
+}
+
+.conteudo--Exposicao h3, .conteudo--Historia h3{
+    padding-top: 1.5rem;
+}
+
+.conteudo--Exposicao ul{
+    padding-left: 2rem;
+}
+.conteudo--Exposicao ul li a{
+    color: var(--texto);
+}
+
+.conteudo--Historia p{
+    max-width: 19rem;
+}
+
+.conteudo--Historia a{
+    color: var(--texto);
+    display: block;
+    padding-top: .85rem;
+}
+
+.conteudo--Historia a:hover, footer nav ul li a:hover, .footer--Texto p a:hover{
+    color: var(--titulo--h3);
+}
+
+/* ASIDE */
+
+.box--Aside{
+    background: var(--background--Aside);
+    margin-left: 2.9rem;
+    padding-top: 1rem;
+}
+
+.box--Aside--Formulario{
+    background: var(--background--2);
+    padding: 1rem;
+    width: 100%;
+}
+
+.box--Aside--Formulario h4, .box--Aside--Galeria h4{
+    color: var(--titulo--h4);
+    text-transform: uppercase;
+    padding: .75rem 0;
+}
+
+.box--Aside--Formulario form label{
+    text-transform: capitalize;
+}
+
+.box--Aside--Formulario form input[type="number"]{
+    width: 2.5rem;
+}
+
+.box--Aside--Formulario form input[type="submit"]{
+    width: 100%;
+    font-size: .9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #9b9271;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    margin: .5rem 0;
+}
+
+.box--Aside--Formulario form input[type="submit"]:hover{
+    /* color: var(--texto); */
+    cursor: pointer;
+}
+
+.box--Aside--Galeria{}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.imagem--fundo{
+    background: url(../image/fundo-foto.png) no-repeat;
+    padding: 1rem;
+}
+
+.galeria img{
+    width: 95px;
+    height: 95px;
+    margin: .2rem 0;
+    /* padding-top: .5rem; */
+}
+
+/* FOOTER */
+.divisor{
+    padding: 1rem;
+    background: url(../image/fundo-rodape.png) no-repeat center center;
+}
+
+footer{
+    margin-bottom: 2rem;
+}
+
+footer nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer nav ul li{
+    padding: .75rem;
+}
+
+footer nav ul li a{
+    color: var(--texto);
+}
+
+
+.footer--Texto{
+    text-align: center;
+}
+
+.footer--Texto p a{
+    color: var(--texto);
+}
