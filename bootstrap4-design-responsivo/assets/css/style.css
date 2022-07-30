@@ -96,3 +96,19 @@ No media query for `xs` since this is the default in Bootstrap */
         color: white;
     }
 } */
+
+
+/* BARRA DE PROGRESSO */
+
+.progress-w-25{
+    width: 25%;
+}
+.progress-w-50{
+    width: 50%;
+}
+.progress-w-75{
+    width: 75%;
+}
+.progress-w-100{
+    width: 100%;
+}
