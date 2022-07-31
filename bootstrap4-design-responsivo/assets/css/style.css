@@ -112,3 +112,19 @@ No media query for `xs` since this is the default in Bootstrap */
 .progress-w-100{
     width: 100%;
 }
+
+/* CARDS */
+
+.box--Card{
+    width: 18rem;
+}
+.box--Card--1{
+    width: 25rem;
+}
+.box--Card--2{
+    max-width: 50rem;
+}
+.box--Card img{
+    width: auto;
+    height: 150px;
+}
