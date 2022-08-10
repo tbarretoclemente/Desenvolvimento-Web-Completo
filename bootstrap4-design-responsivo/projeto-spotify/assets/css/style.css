@@ -128,7 +128,6 @@ button.navbar-toggler{
 }
 
 
-
 /* MEDIA QUERY */
 
 @media(max-width: 575.98px){
@@ -137,19 +136,28 @@ button.navbar-toggler{
         display: block;
     }
 
-    
+    .recursos img{
+        /* width: 50%; */
+        display: none;
+    }
+
 }
 @media(min-width: 576px) and (max-width: 767.98px){
     .hero--Title{
         font-size: 3em;
     }
 
+    
 }
 @media(min-width: 768px) and (max-width: 991.98px){
     .hero--Title{
         font-size: 4em;
     }
 
+    .recursos img{
+        width: 90%;
+        padding-left: 55px;
+    }
     
 }
 @media(min-width: 992px) and (max-width: 1199.98px){
@@ -157,6 +165,10 @@ button.navbar-toggler{
         font-size: 5em;
     }
     
+    .recursos img{
+        width: 85%;
+        padding-left: 55px;
+    }
 }
 @media(min-width: 1200px){
     .hero--Title{
