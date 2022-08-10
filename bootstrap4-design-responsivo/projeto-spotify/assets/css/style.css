@@ -1,0 +1,166 @@
+/* GOOGLE FONT'S */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Dancing+Script:wght@400;500;700&family=Forum&family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@200;400;500;700&family=Raleway:wght@200;300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* BODY */
+body{
+    background: url(../image/capa.png),
+    url(../image/ruido.png),
+    linear-gradient(50deg,#ff4169,#7c26f8);
+    background-attachment: fixed;
+}
+
+html,body, .hero{
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+h2{
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+h3{
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+
+
+/* image--Resolution */
+.image--Resolution{
+    width: 142px;
+}
+
+/* NAV */
+nav.nav--Transparencia{
+    padding: 15px 0;
+    background: rgba(0,0,0,.6);
+}
+
+.navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar-nav .nav-link:hover{
+    color: #9bf0e1;
+}
+
+button.navbar-toggler{
+    color: rgba(255,255,255, .7);
+    border-color: rgba(255,255,255, .7);
+}
+
+/* Divisor */
+.divisor{
+    width: 1px;
+    background: #fff;
+    margin: 12px 15px;
+}
+
+/* hero--Title */
+.hero--Title{
+    font-weight: 900;
+    margin-bottom: 50px;
+    letter-spacing: -0.05em;
+    color: #fff;
+}
+
+
+/* btn--Customizado */
+.btn--Customizado{
+    color: #fff;
+    border-radius: 500px;
+    transition: background .4s, color .4s;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.btn--Color--1{
+    background: #7c25f8;
+    padding: 13px;
+}
+
+.btn--Color--1:hover{
+    background: #6207e3;
+    color: #fff;
+}
+.btn--Color--2{
+    border: 2px solid #fff;
+
+}
+.btn--Color--2:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+
+/* SERVICOS */
+
+.servicos{
+    background: #fff;
+    padding: 20px 0;
+}
+
+.servicos h2, h3{
+    color: #7c25f8;
+}
+
+.albuns{
+    padding: 10px 0;
+}
+
+/* RECURSOS */
+.recursos{
+    padding: 20px 0;
+}
+
+.recursos h2, .recursos p{
+    color: #fff;
+}
+.recursos h3{
+    color: #9bf0e1;
+}
+
+.recursos--Rotacionar{
+    transform: rotate(30deg);
+    padding-left: 80px;
+}
+
+
+
+/* MEDIA QUERY */
+
+@media(max-width: 575.98px){
+    .btn--Customizado{
+        margin: 10px 0;
+        display: block;
+    }
+
+    
+}
+@media(min-width: 576px) and (max-width: 767.98px){
+    .hero--Title{
+        font-size: 3em;
+    }
+
+}
+@media(min-width: 768px) and (max-width: 991.98px){
+    .hero--Title{
+        font-size: 4em;
+    }
+
+    
+}
+@media(min-width: 992px) and (max-width: 1199.98px){
+    .hero--Title{
+        font-size: 5em;
+    }
+    
+}
+@media(min-width: 1200px){
+    .hero--Title{
+        font-size: 6em;
+    }
+
+}
