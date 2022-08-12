@@ -1,0 +1,44 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* CONTAINER */
+.container{
+    width: 75rem;
+    margin: 0 auto;
+}
+
+/* CONTAINER FLEX*/
+
+.container--Flex{
+    display: flex;
+}
+
+.item--1{
+    flex: 1 0 auto;
+    line-height: 2em;
+}
+
+
+/* SECTION */
+
+.section{
+    margin: 1rem 0;
+}
