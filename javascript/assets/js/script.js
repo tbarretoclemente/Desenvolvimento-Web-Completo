@@ -148,3 +148,32 @@
 // boasVindas();
 // helloWorld();
 // texto();
+
+
+// FUNÇÕES Anonima
+
+// let funcaoAnonima = function(){
+//     document.write(`Essa é uma função anomina!!!`)
+// }
+
+// funcaoAnonima();
+
+// FUNÇÕES CallBack/Wrapper
+
+function exibirArtigo(id,callbackSucesso,callbackErro){
+    if(true){
+        callbackSucesso("Essa é uma função de callback de sucesso", "você teve sucesso em criar a função.")
+    }else{
+        callbackErro("Erro ao criar a função de callback");
+    }
+}
+
+let callbackSucesso = function(titulo,descricao){
+    document.write(`<h3>${titulo}</h3> <br><hr><p>${descricao}</p>`);
+}
+let callbackErro = function(erro){
+    document.write(`<h3>${erro}</h3>`);
+
+}
+
+exibirArtigo(1,callbackSucesso,callbackErro);
