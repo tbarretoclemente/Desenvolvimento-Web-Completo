@@ -52,6 +52,55 @@ let vendasMes = 1230.32;
 document.write(`<br>Nome do funcionário: ${nomeVendedor}<br>Salário Fixo: R$${salarioFixo}<br>Valor de Vendas/Mês: R$${vendasMes} reais`);
 document.write(`<br>Salário a receber com comissão é: R$${(vendasMes*0.15) + salarioFixo} reais`)
 
+// 9 = calcule e mostre o volume de uma esfera sendo fornecido o valor de seu raio (R)
+// A fórmula para calcular o volume é: (4/3) * pi * R3. Considere (atribua) para pi o valor 3.14159
+document.write(`<br><br>Exercico 9 - calcule e mostre o volume de uma esfera sendo fornecido o valor de seu raio (R).`);
+
+let raioEsfera = 3;
+let calculoVolumeEsfera = ((4/3) * Math.PI * Math.pow(raioEsfera,3));
+document.write(`<br>Raio: ${raioEsfera} <br>Calculo do volume da esfera: ${calculoVolumeEsfera}`);
+
+// 10 = leia três valores: A, B e C. Em seguida, calcule e mostre:
+// a -> a área do triângulo retângulo que tem A por base e C por altura.
+// b -> a área do círculo de raio C. (pi = 3.14159)
+// c -> a área do trapézio que tem A e B por bases e C por altura.
+// d -> a área do quadrado que tem lado B.
+// e -> a área do retângulo que tem lados A e B.
+let areaA = 2;
+let areaB = 2;
+let areaC = 2;
+
+document.write(`<br><br>Exercico 10 - leia três valores: A, B e C. Em seguida, calcule e mostre:<br>`);
+document.write(`<br>Base:${areaA} <br>Altura:${areaC}<br>Raio:${areaC}<br> <br>1 - A área do triângulo retângulo: ${(areaA * areaC)/2}`);
+document.write(`<br>2 - A área do círculo de raio: ${(Math.PI * Math.pow(areaC,2))}`);
+document.write(`<br>3 - A área do trapézio: ${(areaA + areaB) * areaC / 2}`);
+document.write(`<br>4 - A área do quadrado: ${Math.pow(areaA,2)}`);
+document.write(`<br>5 - A área do retângulo: ${areaA * areaB}`);
+
+
+// 11 =  leia três valores e apresente o maior dos três valores lidos
+let numeroA = 1;
+let numeroB = 44;
+let numeroC = 16;
+document.write(`<br><br>Exercico 11 -  leia três valores e apresente o maior dos três valores lidos.<br>`);
+document.write(`Primeiro número: ${numeroA} <br>Segundo número: ${numeroB}<br>Terceiro número: ${numeroC} <br>`)
+if(numeroA == numeroB && numeroA == numeroB && numeroA == numeroC){
+    document.write(`Todos os números são iguais ${numeroA}`)
+}else if(numeroA >= numeroB && numeroA >= numeroC){
+    document.write(`O número ${numeroA} é o maior`)
+}else if(numeroB >= numeroA && numeroB >= numeroC){
+    document.write(`O número ${numeroB} é o maior`)
+}else{
+    document.write(`O número ${numeroC} é o maior`)
+}
+
+
+// 12 = Calcule o consumo médio de um automóvel sendo fornecidos a distância total percorrida (em Km) e o total de combustível gasto (em litros).
+let distanciaTotalPercorrida = 500;
+let totalDeCombustivelGasto = 32;
+document.write(`<br><br>Exercico 12 - Calcule o consumo médio de um automóvel sendo fornecidos a distância total percorrida, e o total de combustível gasto.<br><br>`);
+document.write(`Distância total percorrida: ${distanciaTotalPercorrida}km/l<br> Total de combustivel gasto: ${totalDeCombustivelGasto}<br>`)
+document.write(`O consumo médio foi de: ${distanciaTotalPercorrida/totalDeCombustivelGasto}`);
 
 
 
