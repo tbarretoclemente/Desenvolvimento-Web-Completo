@@ -23,3 +23,11 @@ document.write(`<strong>Método Math.sqrt:</strong> Retorna a raiz quadrada de n
 document.write(`Número ${numero4} // Raiza Quadrada: ${Math.sqrt(numero4)} <br><br>`);
 document.write(`<strong>Método Math.trunc:</strong> Retorna a parte inteira de um número, removendo os décimais.<br><br>`);
 document.write(`Número ${numero2} // Retorno: ${Math.trunc(numero2)} <br><br>`);
+
+document.write(`<h3>Funções Nativas Númericas</h3>`);
+document.write(`<strong>Método Number.isInteger:</strong> Verifica se um valor é um inteiro.<br><br>`);
+document.write(`Número ${numero2} // Retorno: ${Number.isInteger(numero2)} <br><br>`);
+document.write(`Número ${numero3} // Retorno: ${Number.isInteger(numero3)} <br><br>`);
+document.write(`<strong>Método toFixed:</strong> Formata um número com x números de dígitos após o ponto decimal.<br><br>`);
+document.write(`Número ${numero} // Retorno: ${numero.toFixed(2)} <br><br>`);
+
