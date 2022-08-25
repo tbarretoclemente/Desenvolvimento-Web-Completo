@@ -36,7 +36,17 @@ document.write(`Ano: ${data.toString()} <br><br>`);
 
 document.write(`<strong>Método setHours:</strong> Define a hora de um objeto de data.<br><br>`);
 document.write(`Horas: ${data.toString()} <br><br>`);
-data.setHours(data.getHosetHours() + 1);
+data.setHours(data.getHours() + 2);
 document.write(`Horas: ${data.toString()} <br><br>`);
+
+document.write(`<strong>Método setMinutes:</strong> Definir os minutos de um objeto de data.<br><br>`);
+document.write(`Minutos: ${data.toString()} <br><br>`);
+data.setMinutes(data.getMinutes() + 42);
+document.write(`Minutos: ${data.toString()} <br><br>`);
+
+document.write(`<strong>Método setMilliseconds:</strong> Define os milissegundos de um objeto de data.<br><br>`);
+document.write(`Milissegundos: ${data.toString()} <br><br>`);
+data.setMilliseconds(data.getMilliseconds() + 50);
+document.write(`Milissegundos: ${data.toString()} <br><br>`);
 
 
