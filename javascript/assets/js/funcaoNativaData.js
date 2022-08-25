@@ -47,6 +47,16 @@ document.write(`Minutos: ${data.toString()} <br><br>`);
 document.write(`<strong>Método setMilliseconds:</strong> Define os milissegundos de um objeto de data.<br><br>`);
 document.write(`Milissegundos: ${data.toString()} <br><br>`);
 data.setMilliseconds(data.getMilliseconds() + 50);
-document.write(`Milissegundos: ${data.toString()} <br><br>`);
+document.write(`Milissegundos: ${data.toString()} <br><br><hr>`);
+
+
+document.write(`<strong>Método toJSON():</strong> Retorna a data como uma string, formatada como uma data JSON.<br><br>`);
+document.write(`JSON Data: ${data.toJSON()} <br><br>`);
+document.write(`<strong>Método toLocaleDateString():</strong> Retorna a parte de data de um objeto Date como uma string, usando convenções de localidade.<br><br>`);
+document.write(`Data: ${data.toLocaleDateString()} <br><br>`);
+document.write(`<strong>Método toLocaleTimeString():</strong> Retorna a parte de hora de um objeto Date como uma string, usando convenções de localidade.<br><br>`);
+document.write(`Hora: ${data.toLocaleTimeString()}<br><br>`);
+document.write(`<strong>Método toLocaleString():</strong> Converte um objeto Date em uma string, usando convenções de localidade.<br><br>`);
+document.write(`Data/Hora: ${data.toLocaleString()}`);
 
 
