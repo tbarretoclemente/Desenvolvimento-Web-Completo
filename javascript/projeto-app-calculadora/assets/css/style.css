@@ -1,0 +1,50 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    width: 100%;
+}
+
+.buttonC{
+    width: 94px;
+}
+
+.buttonIgual{
+    height: 85px;
+    padding-top: 1rem;
+}
+
+button{
+    width: 45px;
+    height: 35px;
+    margin: .4rem 0;
+}
+
+.container{
+    width: 230px;
+}
+
+.container--Flex{
+    display: flex;
+}
+
+.flex--Column{
+    flex-direction: column;
+}
+
+.flex--1{
+    flex: 1 0 300px;
+}
+
+.pm{
+    padding: 1rem;
+    margin: 1rem;
+}
+.mr--1{
+    margin-left: .5rem;
+}
