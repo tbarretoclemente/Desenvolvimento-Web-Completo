@@ -14,7 +14,7 @@
 
     <div class="container pm">
         <div class="">
-            <input type="text" name="" id="">
+            <input type="text" name="" id="resultado">
         </div>
 
         <div class="container--Flex">
@@ -23,46 +23,48 @@
 
     
                 <div class="">
-                    <button class="buttonC">C</button>
-                    <button>/</button>
+                    <button class="buttonC" onclick="calcular('acao', 'c')">C</button>
+                    <button onclick="calcular('acao','/')">/</button>
                     
                 </div>
                 
                 <div class="">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
+                    <button onclick="calcular('valor', 7)">7</button>
+                    <button onclick="calcular('valor', 8)">8</button>
+                    <button onclick="calcular('valor', 9)">9</button>
                     
                 </div>
     
                 <div class="">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    <button onclick="calcular('valor', 4)">4</button>
+                    <button onclick="calcular('valor', 5)">5</button>
+                    <button onclick="calcular('valor', 6)">6</button>
                     
                 </div>
     
                 <div class="">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button onclick="calcular('valor', 1)">1</button>
+                    <button onclick="calcular('valor', 2)">2</button>
+                    <button onclick="calcular('valor', 3)">3</button>
                 </div>
                 
                 <div class="">
-                    <button class="buttonC">0</button>
-                    <button>.</button>
+                    <button onclick="calcular('valor', 0)" class="buttonC">0</button>
+                    <button onclick="calcular('acao', '.')">.</button>
                 </div>
             </div>
 
             <div class="container--Flex flex--Column mr--1">
-                <button>x</button>
-                <button>+</button>
-                <button>-</button>
-                <button class="buttonIgual">=</button>
+                <button onclick="calcular('acao', '*')">x</button>
+                <button onclick="calcular('acao', '+')">+</button>
+                <button onclick="calcular('acao', '-')">-</button>
+                <button class="buttonIgual" onclick="calcular('acao','=')">=</button>
 
             </div>
 
         </div>
     </div>
+
+    <script src="assets/js/calculadora.js"></script>
 </body>
 </html>
