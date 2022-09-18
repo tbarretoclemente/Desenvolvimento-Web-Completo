@@ -33,5 +33,5 @@ if(media <= 4.99){
 }else{
     document.write("Aluno Aprovado !!!");
 }
-document.write("<br>Nome Final: " + media)
+document.write("<br>Nota Final: " + media)
 console.log(media);
