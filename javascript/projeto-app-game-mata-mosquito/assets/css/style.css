@@ -1,0 +1,53 @@
+/* BODY */
+
+body{
+    background-image: url(../image/bg.jpg);
+    background-repeat: no-repeat;
+}
+
+
+/* RESIZER IMAGE */
+
+.resizeImg{
+    width: 50px;
+    height: 50px;
+}
+.resizeImg--1{
+    width: 70px;
+    height: 70px;
+}
+.resizeImg--2{
+    width: 90px;
+    height: 90px;
+}
+
+/* LADOS ALEATORIOS */
+
+.ladoA{
+    transform: scaleX(1);
+}
+.ladoB{
+    transform: scaleX(-1);
+}
+
+
+/* CONTAINER PAINEL */
+
+.container__Painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #fff;
+    background: #fff;
+    opacity: .7;
+}
+.painel--Vidas{
+    display: flex;
+}
+.painel--Cronometro{
+    display: flex;
+    font-size: 1.2em;
+
+}
