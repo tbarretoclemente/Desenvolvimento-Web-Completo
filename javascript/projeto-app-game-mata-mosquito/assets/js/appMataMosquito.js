@@ -5,14 +5,43 @@
 // 4 - adicionar no body atributo "onresize" para atualizar altura e largura
 
 let altura = 0,
-    largura = 0;
+    largura = 0,
+    pontosDeVida = 1,
+    tempo = 10+1,
+    respaw = 1500;
 
-function ajusteAlturaLargura() {
+let nivel = window.location.search;
+nivel = nivel.replace("?","");
+
+if(nivel == "normal"){
+    respaw == 1500;
+}else if(nivel == "dificil"){
+    respaw == 1000;
+}else if(nivel == "chucknorris"){
+    respaw == 750;
+}
+
+    function ajusteAlturaLargura() {
     altura = window.innerHeight;
     largura = window.innerWidth;
     // console.log(altura, largura);
 }
 ajusteAlturaLargura();
+
+
+// Cronometro
+
+let cronometro = setInterval(function(){
+    tempo--;
+    if(tempo < 0){
+        clearInterval(cronometro);
+        clearInterval(temporizador);
+        window.location.href = "winner.html";
+    }else{
+        document.getElementById("cronometro").innerHTML = tempo;
+    }
+
+},1000);
 
 
 function posicaoRandomica() {
@@ -21,8 +50,18 @@ function posicaoRandomica() {
     let verificaMosquito = document.getElementById("mosquitoId");
     if(verificaMosquito){
         document.getElementById("mosquitoId").remove()
+        
+        // Controle de pontos de vida
+        if(pontosDeVida > 3){
+            window.location.href = "gameover.html";
+        }else{
+
+            document.getElementById("vidas--" + pontosDeVida).src = "assets/image/coracao_vazio.png";
+            pontosDeVida++;
+        }
     }
 
+    
 
     // Criação de posição randomica
     let posicaoX = Math.floor(Math.random() * largura) - 90;
@@ -48,6 +87,11 @@ function posicaoRandomica() {
     // Id de verificação do elemento mosquito
     criarMosquito.id = "mosquitoId";
 
+    // Removendo mosquito
+    criarMosquito.onclick = function(){
+        this.remove();
+    }
+
     // Adicionando elemento no body
     document.body.appendChild(criarMosquito);
 
@@ -65,7 +109,6 @@ function ajusteTamanhoMosquito() {
     }
 }
 
-
 function ladoRandom(){
     let ladoAleatorio = Math.floor(Math.random() * 2);
     switch(ladoAleatorio){
@@ -77,8 +120,17 @@ function ladoRandom(){
 }
 
 
-function timer(){
-    let tempoCriacao = setInterval(function(){
-        posicaoRandomica();
-    },1200)
+function reiniciarJogo(){
+    window.location.href = "index.html";
+}
+
+function starGame(){
+    let nivel = document.getElementById("nivel").value;
+
+    if(nivel === ""){
+        alert(`Selecione um nivel para iniciar o jogo!!!`);
+        return false;
+    }
+
+    window.location.href = "index.html?" + nivel;
 }

@@ -51,3 +51,40 @@ body{
     font-size: 1.2em;
 
 }
+
+
+/* CONTAINER FLEX */
+.container--Flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn--Reinicar{
+    background: rgba(17, 17, 17, .5);
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: .25rem;
+    padding: .75rem 2rem;
+}
+
+.btn--Reinicar:hover{
+    transition: .4s all;
+    background: #111;
+    cursor: pointer;
+}
+
+
+/* box--Select */
+.box--Select{
+    margin: 1rem 0;
+}
+
+.box--Select--In{
+    padding: .55rem;
+    border-radius: .25rem;
+    background: rgba(17, 17, 17, .5);
+    color: #fff;
+    font-size: .81em;
+}

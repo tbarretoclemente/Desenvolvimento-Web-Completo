@@ -11,11 +11,11 @@
 
     <section class="container__Painel">
         <div class="painel--Vidas">
-            <img src="assets/image/coracao_vazio.png" alt="">
-            <img src="assets/image/coracao_cheio.png" alt="">
-            <img src="assets/image/coracao_cheio.png" alt="">
+            <img src="assets/image/coracao_cheio.png" alt="" id="vidas--1">
+            <img src="assets/image/coracao_cheio.png" alt="" id="vidas--2">
+            <img src="assets/image/coracao_cheio.png" alt="" id="vidas--3">
         </div>
-        <div class="painel--Cronometro">Tempo restante: </div>
+        <div class="painel--Cronometro">Tempo restante: <span id="cronometro"></span></div>
     </section>
 
 
@@ -25,7 +25,10 @@
     <!-- SCRIPT -->
     <script src="assets/js/appMataMosquito.js"></script>
     <script>
-        // timer();
+        // starGame();
+        let temporizador = setInterval(function(){
+            posicaoRandomica();
+        },respaw);
         
     </script>
 </body>
