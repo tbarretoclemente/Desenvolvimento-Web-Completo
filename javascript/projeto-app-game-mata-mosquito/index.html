@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>App mata mosquito</title>
+    <link rel="stylesheet" href="assets/css/appMataMosquito.css">
+    <title>Jogo Mata Mosquito </title>
 </head>
-<body onresize="ajusteAlturaLargura()">
+<body>
+    <section class="container--Flex">
 
-    <section class="container__Painel">
-        <div class="painel--Vidas">
-            <img src="assets/image/coracao_cheio.png" alt="" id="vidas--1">
-            <img src="assets/image/coracao_cheio.png" alt="" id="vidas--2">
-            <img src="assets/image/coracao_cheio.png" alt="" id="vidas--3">
+        <div class="">
+            <img src="assets/image/game.png" alt="">
         </div>
-        <div class="painel--Cronometro">Tempo restante: <span id="cronometro"></span></div>
+
+        <div class="btn--Selecionar">
+            <select name="" id="nivel">
+                <option value="">-- Selecione o Nível --</option>
+                <option value="normal">Normal</option>
+                <option value="dificil">Difícil</option>
+                <option value="chucknorris">Chuck Norris</option>
+            </select>
+        </div>
+
+        <div class="btn--Reiniciar">
+            <button type="button" onclick="starGame()">Iniciar Jogo</button>
+        </div>
     </section>
 
-
-
-
-
-    <!-- SCRIPT -->
+    <!-- Script -->
     <script src="assets/js/appMataMosquito.js"></script>
-    <script>
-        // starGame();
-        let temporizador = setInterval(function(){
-            posicaoRandomica();
-        },respaw);
-        
-    </script>
 </body>
 </html>

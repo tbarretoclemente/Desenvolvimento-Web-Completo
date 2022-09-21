@@ -1,136 +1,149 @@
-// Altura e Largura da pagina
-// 1 - criar variaveis para guardar localização da altura e largura
-// 2 - criar função para ajusta de acordo com a tela
-// 3 - chamar função 
-// 4 - adicionar no body atributo "onresize" para atualizar altura e largura
+// Criar função para buscar valores de altura e largura do body
 
-let altura = 0,
-    largura = 0,
-    pontosDeVida = 1,
-    tempo = 10+1,
-    respaw = 1500;
+let altura,largura,posicaoX,posicaoY,vidas = 1, tempo = 10,nivel,respawMosquitoGame = 2000;
 
-let nivel = window.location.search;
-nivel = nivel.replace("?","");
+// function getAlturaLarguraBody(){
+//     altura = window.innerHeight
+//     largura = window.innerWidth
+//     console.log(altura, largura);
+// }
+//  getAlturaLarguraBody();
 
-if(nivel == "normal"){
-    respaw == 1500;
-}else if(nivel == "dificil"){
-    respaw == 1000;
-}else if(nivel == "chucknorris"){
-    respaw == 750;
-}
-
-    function ajusteAlturaLargura() {
+ let getAlturaLarguraBody = () =>{
     altura = window.innerHeight;
     largura = window.innerWidth;
-    // console.log(altura, largura);
-}
-ajusteAlturaLargura();
+    console.log(altura,largura)
+ }
+ getAlturaLarguraBody();
 
 
-// Cronometro
+// modificando nivel do jogo
+// nivel = window.location.search;
+// nivel.replace("?","");
 
-let cronometro = setInterval(function(){
-    tempo--;
-    if(tempo < 0){
-        clearInterval(cronometro);
-        clearInterval(temporizador);
-        window.location.href = "winner.html";
-    }else{
-        document.getElementById("cronometro").innerHTML = tempo;
-    }
-
-},1000);
+// if(nivel === "normal"){
+//     respawMosquitoGame = 2000;
+// }else if(nivel === "dificil"){
+//     respawMosquitoGame = 1500;
+// }else{
+//     respawMosquitoGame = 750;
+// }
 
 
-function posicaoRandomica() {
 
-    // Caso exista o ID mosquitoId, remover o elemento criado anteriormente
-    let verificaMosquito = document.getElementById("mosquitoId");
-    if(verificaMosquito){
-        document.getElementById("mosquitoId").remove()
-        
-        // Controle de pontos de vida
-        if(pontosDeVida > 3){
+let posicaoRandomica = () =>{
+
+    // remover o mosquito caso já exista
+    if(document.getElementById("mosquitoId")){
+        document.getElementById("mosquitoId").remove();
+
+        if(vidas > 3){
             window.location.href = "gameover.html";
+            
         }else{
-
-            document.getElementById("vidas--" + pontosDeVida).src = "assets/image/coracao_vazio.png";
-            pontosDeVida++;
+            document.getElementById("v" + vidas).src = "assets/image/coracao_vazio.png";
+            vidas++;
+            
         }
     }
-
     
 
-    // Criação de posição randomica
-    let posicaoX = Math.floor(Math.random() * largura) - 90;
-    let posicaoY = Math.floor(Math.random() * altura) - 90;
+    //  Criar posicionamento aleatorios para o mosquito
+    posicaoX = Math.floor(Math.random() * largura) - 90;
+    posicaoY = Math.floor(Math.random() * altura) -90;
 
-    // Verifica se possição é negativa
+    // console.log(posicaoX,posicaoY);
+
     posicaoX = (posicaoX < 0) ? 0 : posicaoX;
     posicaoY = (posicaoY < 0) ? 0 : posicaoY;
-
-    console.log(posicaoX, posicaoY);
-
-    // Criação do elemento html mosquito
+    
+    // Criar elemento html para o mosquito
     let criarMosquito = document.createElement("img");
     criarMosquito.src = "assets/image/mosca.png";
-    criarMosquito.className = ajusteTamanhoMosquito() + " " + ladoRandom(); 
 
-    // Acessando Style left e top
+    // Adicionando classe para ajustar img do mosquito
+    criarMosquito.className = ajustaTamanhoMosquito() + " " + ladoRandom() ;
+    
+    
+    // Adicionando style para o posicionamento da img mosquito
     criarMosquito.style.left = posicaoX + "px";
     criarMosquito.style.top = posicaoY + "px";
     criarMosquito.style.position = "absolute";
 
-
-    // Id de verificação do elemento mosquito
+    // Criar ID especifico para mosquito
     criarMosquito.id = "mosquitoId";
-
-    // Removendo mosquito
+    
+    // Remove mosquito quando clicado
     criarMosquito.onclick = function(){
         this.remove();
     }
 
-    // Adicionando elemento no body
+
     document.body.appendChild(criarMosquito);
-
 }
 
-function ajusteTamanhoMosquito() {
-    let ajustarTamanhoMosquito = Math.floor(Math.random() * 3);
+let ajustaTamanhoMosquito = () =>{
+    let tamanhoMosquito = Math.floor(Math.random() * 3);
+    // console.log(tamanhoMosquito);
 
-    if(ajustarTamanhoMosquito === 0){
-        return "resizeImg";
-    }else if(ajustarTamanhoMosquito === 1){
-        return "resizeImg--1";
+    if(tamanhoMosquito === 0){
+        return "mosquito--1";
+    }else if(tamanhoMosquito === 1){
+        return "mosquito--2"
     }else{
-        return "resizeImg--2";
+        return "mosquito--3"
     }
 }
 
-function ladoRandom(){
+
+let ladoRandom = () =>{
     let ladoAleatorio = Math.floor(Math.random() * 2);
-    switch(ladoAleatorio){
-        case 0:
-            return "ladoA";
-        case 1:
-            return "ladoB";
+    // console.log(ladoAleatorio);
+    if(ladoAleatorio === 0){
+        return "lado--Left";
+    }else{
+        return "lado--Right";
     }
 }
 
-
-function reiniciarJogo(){
-    window.location.href = "index.html";
+let respawMosquito = () => {
+    let criarMosquitoRespaw = setInterval(function(){
+        posicaoRandomica();
+    }, respawMosquitoGame);
 }
 
-function starGame(){
-    let nivel = document.getElementById("nivel").value;
+let resetGame = () =>{
+    return window.location.href = "index.html";
+}
 
+let cronometro = () =>{
+
+    let cronometro = setInterval(function(){
+        tempo--;
+    
+        if(tempo < 0){
+            clearInterval(cronometro);
+            clearInterval(respawMosquito());
+            window.location.href = "win.html";
+            
+        }else{
+            document.getElementById("cronometro").innerHTML = tempo;
+        }
+    }, 1000);
+}
+
+
+let starGame = () => {
+    let nivel = document.getElementById("nivel").value;
     if(nivel === ""){
-        alert(`Selecione um nivel para iniciar o jogo!!!`);
+        alert(`Por favor selecione um nível para começar!!!`);
         return false;
     }
-
-    window.location.href = "index.html?" + nivel;
+    
+    window.location.href = "appMataMosquito.html?" + nivel;
 }
+
+nivel = window.location.search;
+nivel.replace("?","");
+
+console.log(nivel);
