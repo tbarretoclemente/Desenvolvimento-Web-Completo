@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+/* HTML */
+html{
+    cursor: url(../image/mata_mosca.png) 30 30, auto;
+    
+}
+
 
 /* Body */
 
