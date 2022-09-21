@@ -1,7 +1,7 @@
 // Criar função para buscar valores de altura e largura do body
 
-let altura,largura,posicaoX,posicaoY,vidas = 1, tempo = 10,nivel,respawMosquitoGame = 2000;
-
+let altura,largura,posicaoX,posicaoY,vidas = 1, tempo = 10,nivel;
+let respawMosquitoGame = 1500;
 // function getAlturaLarguraBody(){
 //     altura = window.innerHeight
 //     largura = window.innerWidth
@@ -20,13 +20,12 @@ let altura,largura,posicaoX,posicaoY,vidas = 1, tempo = 10,nivel,respawMosquitoG
 // modificando nivel do jogo
 // nivel = window.location.search;
 // nivel.replace("?","");
-
-// if(nivel === "normal"){
-//     respawMosquitoGame = 2000;
-// }else if(nivel === "dificil"){
+// if(nivel == "normal"){
 //     respawMosquitoGame = 1500;
+// }else if(nivel == "dificil"){
+//     respawMosquitoGame = 1000;
 // }else{
-//     respawMosquitoGame = 750;
+//     respawMosquitoGame = 850;
 // }
 
 
@@ -109,7 +108,9 @@ let ladoRandom = () =>{
 let respawMosquito = () => {
     let criarMosquitoRespaw = setInterval(function(){
         posicaoRandomica();
+
     }, respawMosquitoGame);
+
 }
 
 let resetGame = () =>{
@@ -134,16 +135,12 @@ let cronometro = () =>{
 
 
 let starGame = () => {
-    let nivel = document.getElementById("nivel").value;
+    nivel = document.getElementById("nivel").value;
     if(nivel === ""){
         alert(`Por favor selecione um nível para começar!!!`);
         return false;
     }
     
-    window.location.href = "appMataMosquito.html?" + nivel;
+    window.location.href = "appMataMosquito.html";
 }
 
-nivel = window.location.search;
-nivel.replace("?","");
-
-console.log(nivel);
