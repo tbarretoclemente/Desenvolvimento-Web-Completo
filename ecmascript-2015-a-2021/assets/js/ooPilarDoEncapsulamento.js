@@ -17,6 +17,8 @@ class Tv{
 
     set canalAtivo(canal){
         // return this._canalAtivo = canal;
+        let verificaCanalAtivo = this._canais.indexOf(canal);
+        console.log(`Index do canal: ${verificaCanalAtivo}`); 
         this._canalAtivo = canal;
     }
 
@@ -24,7 +26,8 @@ class Tv{
 
 let tv = new Tv();
 
-tv._canalAtivo = trocaCanal;
+// tv._canalAtivo = trocaCanal;
+tv.canalAtivo = 10;
 
-console.log(tv);
+// console.log(tv);
 console.log(`Canal Ativo: ${tv.canalAtivo}`);
