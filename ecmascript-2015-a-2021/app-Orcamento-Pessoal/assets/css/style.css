@@ -1,0 +1,88 @@
+/* FONT GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Dancing+Script:wght@400;500;700&family=Forum&family=Lato:wght@100;300;400;700;900&family=Noto+Serif:wght@400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@200;400;500;700&family=Raleway:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--link);
+}
+
+ol,ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ROOT */
+
+:root{
+    /* HUE */
+    --hue: 248;
+
+    /* BASE COLOR */
+    --bg-header: hsl(var(--hue), 39%, 39%);
+    --link: hsl(var(--hue), 100% , 100%)
+}
+
+
+/* TIPOGRAFIA */
+
+h1{
+    font-size: 2.5em;
+    font-weight: 400;
+    letter-spacing: .1em;
+    margin-bottom: 1.5rem;
+}
+
+
+/* CONTAINER */
+.container{
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+/* CONTAINER FLEX */
+.container--Flex{
+    display: flex;
+}
+
+.flex--Align--Center{
+    align-items: center;
+}
+
+.flex--Wrap{
+    flex-wrap: wrap;
+}
+
+.flex--Column{
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header{
+    background: var(--bg-header);
+    padding: 1rem;
+}
+
+nav ul li{
+    padding: 0 .5rem;
+}
+
+/* MAIN */
+
+

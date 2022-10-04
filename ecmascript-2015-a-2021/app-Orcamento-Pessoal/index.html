@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/df9bcec09f.js" crossorigin="anonymous"></script>
+    <title>App Cadastro</title>
+</head>
+<body>
+    
+
+    <header>
+        <div class="container">
+            <div class="container--Flex flex--Align--Center">
+
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/image/logo.png" alt="">
+                    </a>
+                </div>
+
+                <nav>
+                    <ul class="container--Flex">
+                        <li><a href="#">Cadastro</a></li>
+                        <li><a href="#">Consulta</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="container">
+            <section class="section__Cadastro">
+                
+                <div class="box--Title">
+
+                    <h1>Registro de nova despesa</h1>
+                </div>
+
+                <div class="contaier--Formulario">
+                    
+                    <div class="container--Flex box--Formulario flex--Column">
+                        
+                        <div class="">
+                            <select name="" id="anoId">
+                                <option value="">-- Ano --</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                            </select>
+
+                        </div>
+
+                        <div class="">
+                            <select name="" id="mesId">
+                                <option value="">-- Mês --</option>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">fevereiro</option>
+                                <option value="marco">Março</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
+                            </select>
+
+                        </div>
+
+                        <div class="">
+                            <input type="number" name="" id="diaId" min="1" max="31" placeholder="Dia">
+                        </div>
+
+                        <div class="">
+                            <select name="" class="inputTipo" id="tipoId">
+                                <option value="">-- Tipo --</option>
+                                <option value="alimentacao">Alimentação</option>
+                                <option value="educacao">Educação</option>
+                                <option value="lazer">Lazer</option>
+                                <option value="saude">Saúde</option>
+                                <option value="transporte">Transporte</option>
+                            </select>
+                        </div>
+
+                        <div class="">
+                            <input type="text" name="descricao" class="inputDescricao" id="descricaoId" placeholder="Descrição">
+                        </div>
+
+                        <div class="">
+                            <input type="number" name="" id="valorId" placeholder="Valor">
+                        </div>
+
+                        <div class="btn--Add">
+
+                            <button type="submit">
+                                <i class="fa-solid fa-plus"></i>
+                                <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <!-- SCRIPT -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
