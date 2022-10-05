@@ -106,13 +106,26 @@ button{
     margin-top: .5rem;
 }
 /* MAIN */
-
 .container--Tabela{
     margin: 1rem;
+    max-width: 85%;
+    width: 100%;
 }
 
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
 
+th, td {
+    text-align: left;
+    padding: .5rem;
+}
 
+tr:nth-child(even){
+    background: var(--bg-header);
+    color: aliceblue;
+}
 
 @media (20rem <= width <= 47.99rem){
     h1{
