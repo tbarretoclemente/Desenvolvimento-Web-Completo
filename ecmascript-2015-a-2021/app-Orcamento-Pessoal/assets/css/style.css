@@ -46,6 +46,7 @@ h1{
     font-weight: 400;
     letter-spacing: .1em;
     margin-bottom: 1.5rem;
+    color: var(--link);
 }
 
 
@@ -77,10 +78,6 @@ h1{
 header{
     background: var(--bg-header);
     padding: 1rem;
-}
-
-nav ul li{
-    padding: 0 .5rem;
 }
 
 .section__Cadastro{
@@ -127,40 +124,88 @@ tr:nth-child(even){
     color: aliceblue;
 }
 
-@media (20rem <= width <= 47.99rem){
-    h1{
-        font-size: 1.5em;
-        text-align: center;
-    }
 
-    /* Formulário */
-    .box--Formulario{
-        flex-direction: column;
-    }
 
+
+/* TESTES */
+
+.fa-bars{
+    font-size: 1.5em;
+    color: #e94949;
+    cursor: pointer;
 }
 
-@media (48rem <= width <= 160rem){
-    h1{
-        font-size: 1.5em;
-        text-align: center;
+.fa-bars:hover{
+    color: #000;
+}
+
+/* Menu */
+.menu{
+    height: 0;
+    overflow: hidden;
+    transition:  all .3s linear;
+}
+
+.menu a{
+    color: var(--link);
+    letter-spacing: .1rem;
+    display: block;
+    padding: .5rem 1rem;
+    transition: all .3s linear;
+}
+
+.menu a:hover{
+    background: #f8a5a5;
+    color: #e94949;
+    padding-left: 1.5rem;
+}
+
+.nav--Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* SHOW MENU */
+
+.show--Menu{
+    height: 10rem;
+}
+
+
+@media (min-width: 800px) {
+    .nav--Main{
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
     }
 
-    /* Formulário */
-    .box--Formulario{
-        flex-direction: row;
-        flex-wrap: wrap;
+    .nav--Header{
+        padding:  0;
     }
 
-    .box--Formulario div{
+    .fa-bars{
+        display: none;
+    }
+
+    .menu{
+        height: auto;
+        display: flex;
+        
+    }
+
+    .menu a{
+        padding: 0;
         margin: 0 .5rem;
     }
 
-    .inputTipo{
-        width: 50vw;
-    }
-
-    .inputDescricao{
-        width: 53vw !important;
+    .menu a:hover{
+        padding: 0;
+        background: transparent;
     }
 }
+
