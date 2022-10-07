@@ -37,7 +37,7 @@ img{
     --bg-header: hsl(var(--hue), 39%, 39%);
     --text--black: hsl(var(--hue), 0%, 0%);
     --text--white: hsl(var(--hue), 100% , 100%);
-    --link--text: hsl(0, 0%, 60%);
+    --link--text: hsl(0, 0%, 90%);
     --link--hover: hsl(0, 78%, 60%);
     --link--background: hsl(0, 86%, 81%);
 }
@@ -50,7 +50,7 @@ h1{
     font-weight: 400;
     letter-spacing: .1em;
     margin-bottom: 1.5rem;
-    color: var(--text--white);
+    color: var(--text--black);
 }
 
 
@@ -90,7 +90,8 @@ header{
 /* INPUT STYLE */
 
 select, input[type="number"], input[type="text"]{
-        width: 100%;
+        max-width: 100%;
+        /* width: 100%; */
         margin: .5rem 0;
         padding: .5rem;
 }
@@ -99,7 +100,7 @@ select, input[type="number"], input[type="text"]{
 button{
     background: var(--bg-header);
     border-radius: .25rem;
-    color: var(--link);
+    color: var(--text--white);
     cursor: pointer;
     padding: .5rem 1rem;
     width: 100%;
@@ -150,10 +151,6 @@ nav{
     cursor: pointer;
 }
 
-.icone:hover{
-    color: var(--text--black);
-}
-
 /* CONTAINER MENU */
 
 .container--Menu{
@@ -182,6 +179,9 @@ nav{
 }
 
 @media (min-width: 768px){
+
+   
+
     .nav--Main{
         max-width: 73.125rem;
         margin: 0 auto;
@@ -212,5 +212,42 @@ nav{
     .container--Menu a:hover{
         padding: 0;
         background: transparent;
+    }
+    
+}
+
+@media (max-width: 767.99px){
+   
+    h1{
+        font-size: 1.95em;
+        text-align: center;
+    }
+
+    .box--Formulario{
+        flex-direction: column;
+    }
+
+    select, input[type="number"], input[type="text"]{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+    .box--Formulario{
+        flex-wrap: wrap;
+    }
+    .box--Formulario div{
+        max-width: 100%;
+        margin-right: .5rem;
+    }
+
+    
+
+    .inputTipo{
+        width: 50vw;
+    }
+
+    .inputDescricao{
+        width: 53vw;
     }
 }
