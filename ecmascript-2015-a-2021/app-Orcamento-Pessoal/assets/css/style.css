@@ -35,7 +35,11 @@ img{
 
     /* BASE COLOR */
     --bg-header: hsl(var(--hue), 39%, 39%);
-    --link: hsl(var(--hue), 100% , 100%)
+    --text--black: hsl(var(--hue), 0%, 0%);
+    --text--white: hsl(var(--hue), 100% , 100%);
+    --link--text: hsl(0, 0%, 60%);
+    --link--hover: hsl(0, 78%, 60%);
+    --link--background: hsl(0, 86%, 81%);
 }
 
 
@@ -46,7 +50,7 @@ h1{
     font-weight: 400;
     letter-spacing: .1em;
     margin-bottom: 1.5rem;
-    color: var(--link);
+    color: var(--text--white);
 }
 
 
@@ -77,7 +81,6 @@ h1{
 
 header{
     background: var(--bg-header);
-    padding: 1rem;
 }
 
 .section__Cadastro{
@@ -126,38 +129,12 @@ tr:nth-child(even){
 
 
 
+/* MENU MOBILE */
 
-/* TESTES */
+/* nav */
 
-.fa-bars{
-    font-size: 1.5em;
-    color: #e94949;
-    cursor: pointer;
-}
-
-.fa-bars:hover{
-    color: #000;
-}
-
-/* Menu */
-.menu{
-    height: 0;
-    overflow: hidden;
-    transition:  all .3s linear;
-}
-
-.menu a{
-    color: var(--link);
-    letter-spacing: .1rem;
-    display: block;
-    padding: .5rem 1rem;
-    transition: all .3s linear;
-}
-
-.menu a:hover{
-    background: #f8a5a5;
-    color: #e94949;
-    padding-left: 1.5rem;
+nav{
+    box-shadow: 0 5px 15px rgba(0,0,0, .1);
 }
 
 .nav--Header{
@@ -167,16 +144,46 @@ tr:nth-child(even){
     padding: 1rem;
 }
 
-/* SHOW MENU */
+.icone{
+    font: 1.5em;
+    color: var(--link--hover);
+    cursor: pointer;
+}
 
+.icone:hover{
+    color: var(--text--black);
+}
+
+/* CONTAINER MENU */
+
+.container--Menu{
+    height: 0;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+
+.container--Menu a{
+    color: var(--link--text);
+    letter-spacing: .1rem;
+    display: block;
+    padding: .5rem 1rem;
+    transition: all .3s linear;
+}
+
+.container--Menu a:hover{
+    background: var(--link--background);
+    color: var(--link--hover);
+    padding: 1.5rem;
+}
+
+/* MOSTRA O CONTAINE MENU */
 .show--Menu{
     height: 10rem;
 }
 
-
-@media (min-width: 800px) {
+@media (min-width: 768px){
     .nav--Main{
-        max-width: 1170px;
+        max-width: 73.125rem;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -185,27 +192,25 @@ tr:nth-child(even){
     }
 
     .nav--Header{
-        padding:  0;
+        padding: 0;
     }
 
-    .fa-bars{
+    .icone{
         display: none;
     }
 
-    .menu{
+    .container--Menu{
         height: auto;
         display: flex;
-        
     }
 
-    .menu a{
+    .container--Menu a{
         padding: 0;
         margin: 0 .5rem;
     }
 
-    .menu a:hover{
+    .container--Menu a:hover{
         padding: 0;
         background: transparent;
     }
 }
-
