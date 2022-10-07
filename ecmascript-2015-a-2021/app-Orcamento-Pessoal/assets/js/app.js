@@ -11,47 +11,57 @@ btnMobile.addEventListener("click", () =>{
 });
 
 
+// CLASS DESPESA
 
-// Class Servidor
+class Despesa {
+    constructor(ano,mes,dia,tipo,descricao,valor){
+        this.anoID = ano;
+        this.mesID = mes;
+        this.diaID = dia;
+        this.tipoID = tipo;
+        this.descricaoID = descricao;
+        this.valorID = valor;
+    }
 
-// class Servidor {
-//     constructor(ano,mes,dia,tipo,descricao,valor){
-//         this.anoID = ano;
-//         this.mesID = mes;
-//         this.diaID = dia;
-//         this.tipoID = tipo;
-//         this.descricaoID = descricao;
-//         this.valorID = valor;
-//     }
-// }
+    // METODOS
+    
 
-
-class Servidor {
-    constructor(){}
-    // METODO
-
-    getValoresInput(dados){
-        console.log(dados);
-        return dados;
+    validarDados(){
+        for(let i in this){
+            if(this[i] == undefined || this[i] == null || this[i] == ""){
+                return false;
+            }
+        }
+        return true;
     }
 }
 
 
+class BancoDeDados {
+    constructor(){
+        let keyId = localStorage.getItem("id");
+        if(keyId === null ){
+            localStorage.setItem("id", 0);
+        }
+    }
+
+    // Metodo
+
+    getKeyId(){
+        let getKeyId = localStorage.getItem("id");
+        return parseInt(getKeyId) + 1;
+    }
+
+    setLocalStorage = (getValorInput) =>{
+        let keyId = this.getKeyId();
+        localStorage.setItem(keyId, JSON.stringify(getValorInput));
+        localStorage.setItem("id", keyId)
+    }
+}
+
 // RECUPERANDO VALORES DOS INPUT'S
 
-
 const valoresInputs = document.getElementById("btnAdd");
-// valoresInputs.addEventListener("click", ()=>{
-//     let ano = document.getElementById("anoId").value;
-//     let mes = document.getElementById("mesId").value;
-//     let dia = document.getElementById("diaId").value;
-//     let tipo = document.getElementById("tipoId").value;
-//     let descricao = document.getElementById("descricaoId").value;
-//     let valor = document.getElementById("valorId").value;
-
-//     console.log(ano,mes,dia,tipo,descricao,valor)
-// });
-
 valoresInputs.addEventListener("click", ()=>{
     const areaInput = {
     ano : document.getElementById("anoId").value,
@@ -62,7 +72,28 @@ valoresInputs.addEventListener("click", ()=>{
     valor : document.getElementById("valorId").value
     }
 
-    let getValores = new Servidor()
-    getValores.getValoresInput(areaInput);
-    // console.log(areaInput);
+    let getValores = new Despesa(
+        areaInput.ano,
+        areaInput.mes,
+        areaInput.dia,
+        areaInput.tipo,
+        areaInput.descricao,
+        areaInput.valor);
+
+    let bancoDeDados = new BancoDeDados();
+    
+    
+    // VALIDANDO DADOS RECEBIDOS
+    if(getValores.validarDados()){
+        // bancoDeDados.setLocalStorage(getValores);
+        console.log(`Dados Válidos`);
+        alert(`Dados Válidos`);
+        
+    }else{
+        console.log(`Dados Inválidos`)
+        alert(`Dados Inválidos`);
+    }
+    
+    
 });
+
