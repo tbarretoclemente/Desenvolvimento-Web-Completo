@@ -27,11 +27,7 @@ btnMobile.addEventListener("click", () =>{
 
 
 class Servidor {
-    constructor(){
-
-    }
-
-
+    constructor(){}
     // METODO
 
     getValoresInput(dados){
