@@ -149,6 +149,7 @@ nav{
     font: 1.5em;
     color: var(--link--hover);
     cursor: pointer;
+    /* display: none; */
 }
 
 /* CONTAINER MENU */
@@ -178,10 +179,22 @@ nav{
     height: 10rem;
 }
 
+@media (max-width: 767.98px){
+    .box--Formulario{
+        flex-direction: column;
+    }
+    
+    h1{
+        font-size: 1.95em;
+        text-align: center;
+    }
+    
+    select, input[type="number"], input[type="text"]{
+        width: 100%;
+    }
+}
+
 @media (min-width: 768px){
-
-   
-
     .nav--Main{
         max-width: 73.125rem;
         margin: 0 auto;
@@ -190,64 +203,50 @@ nav{
         justify-content: space-between;
         padding: 1rem;
     }
-
+    
     .nav--Header{
         padding: 0;
     }
-
+    
     .icone{
-        display: none;
-    }
-
+        display: none!important;
+    }  
+    
     .container--Menu{
         height: auto;
         display: flex;
     }
-
+    
     .container--Menu a{
         padding: 0;
         margin: 0 .5rem;
     }
-
+    
     .container--Menu a:hover{
         padding: 0;
         background: transparent;
     }
     
-}
+    .box--Formulario{
+        flex-wrap: wrap;
+    }
+    
+    .box--Formulario, div{
+        margin-right: .5rem;
+    }
 
-@media (max-width: 767.99px){
-   
+    .contaier--Formulario{
+        /* padding: 1rem; */
+        margin: 1rem;
+    }
+    
+    .inputTipo, .inputDescricao{
+        width: 50vw;
+    }
+    
     h1{
         font-size: 1.95em;
         text-align: center;
     }
 
-    .box--Formulario{
-        flex-direction: column;
-    }
-
-    select, input[type="number"], input[type="text"]{
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px){
-    .box--Formulario{
-        flex-wrap: wrap;
-    }
-    .box--Formulario div{
-        max-width: 100%;
-        margin-right: .5rem;
-    }
-
-    
-
-    .inputTipo{
-        width: 50vw;
-    }
-
-    .inputDescricao{
-        width: 53vw;
-    }
 }
