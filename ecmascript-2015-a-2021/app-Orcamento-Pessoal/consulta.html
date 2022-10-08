@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/df9bcec09f.js" crossorigin="anonymous"></script>
     <title>App Cadastro - Consulta</title>
 </head>
-<body>
+<body onload="consultaLista()">
 
     <header>
 
@@ -125,34 +125,21 @@
                 <div class="container">
                     <div class="container--Tabela">
 
-                        <table>
-                            <tr>
+                        <table class="table">
+                            <thead>
+                              <tr>
                                 <th>Data</th>
                                 <th>Tipo</th>
                                 <th>Descrição</th>
                                 <th>Valor</th>
-                            </tr>
-    
-                            <tr>
-                                <td>a</td>
-                                <td>aa</td>
-                                <td>aa</td>
-                                <td>aa</td>
-                            </tr>
-    
-                            <tr>
-                                <td>a</td>
-                                <td>aa</td>
-                                <td>aa</td>
-                                <td>aa</td>
-                            </tr>
-                            <tr>
-                                <td>a</td>
-                                <td>aa</td>
-                                <td>aa</td>
-                                <td>aa</td>
-                            </tr>
-                        </table>
+                              </tr>
+                            </thead>
+
+                            <tbody id="listaDespesas">
+                              
+                            </tbody>
+
+                          </table>
                     </div>
                 </div>
             </section>
