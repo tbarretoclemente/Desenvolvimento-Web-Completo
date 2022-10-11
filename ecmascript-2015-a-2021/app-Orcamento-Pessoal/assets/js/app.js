@@ -10,21 +10,19 @@ btnMobile.addEventListener("click", () =>{
     containerMenu.classList.toggle("show--Menu");
 });
 
+// ==============================================================
 
-// CLASS DESPESA
-
-class Despesa {
+class Despesas {
     constructor(ano,mes,dia,tipo,descricao,valor){
-        this.anoID = ano;
-        this.mesID = mes;
-        this.diaID = dia;
-        this.tipoID = tipo;
-        this.descricaoID = descricao;
-        this.valorID = valor;
+        this.ano = ano;
+        this.mes = mes;
+        this.dia = dia;
+        this.tipo = tipo;
+        this.descricao = descricao;
+        this.valor = valor;
     }
 
     // METODOS
-    
 
     validarDados(){
         for(let i in this){
@@ -36,102 +34,87 @@ class Despesa {
     }
 }
 
-
-class BancoDeDados {
+class Bd {
     constructor(){
-        let keyId = localStorage.getItem("id");
-        if(keyId === null ){
+        // Verificando existencia do ID
+        let id = localStorage.getItem("id");
+
+        if(id === null){
             localStorage.setItem("id", 0);
         }
     }
 
-    // Metodo
-
-    getKeyId(){
-        let getKeyId = localStorage.getItem("id");
-        return parseInt(getKeyId) + 1;
+    // METODOS
+    getProximoId(){
+        let proximoId = localStorage.getItem("id");
+        return parseInt(proximoId) + 1;
     }
 
-    setLocalStorage = (getValorInput) =>{
-        let keyId = this.getKeyId();
-        localStorage.setItem(keyId, JSON.stringify(getValorInput));
-        localStorage.setItem("id", keyId)
+    gravar = (despesas) =>{
+        let id = this.getProximoId();
+        localStorage.setItem(id, JSON.stringify(despesas))
+        localStorage.setItem("id", id);
     }
 
 
-    consultaDadosLista(){
-        let arrayDespesa = [];
-        // console.log("Metodo para recuperar valores do local storage");
+    recuperarTodosRegistros(){
+        let arrayDespesas = Array();
 
-        let consultaId = localStorage.getItem("id");
-        for(let i = 1; i <= consultaId; i++){
-            let consultaDespesa = JSON.parse(localStorage.getItem(i));
+        let id = localStorage.getItem("id");
+
+        for(let i = 1; i <= id; i++){
+            let despesa = JSON.parse(localStorage.getItem(i));
             
-            if(consultaDespesa === null){
+            if(despesa === null){
                 continue;
             }
-            arrayDespesa.push(consultaDespesa);
-            // console.log(consultaDespesa);
+            
+            arrayDespesas.push(despesa);
         }
-        return arrayDespesa;
+        return arrayDespesas;
     }
 }
 
-let bancoDeDados = new BancoDeDados();
-// RECUPERANDO VALORES DOS INPUT'S
+let bd = new Bd();
 
-// CADASTRO 
 
-let valoresInputs = () =>{
-    const areaInput = {
-    ano : document.getElementById("anoId").value,
-    mes : document.getElementById("mesId").value,
-    dia : document.getElementById("diaId").value,
-    tipo : document.getElementById("tipoId").value,
-    descricao : document.getElementById("descricaoId").value,
-    valor : document.getElementById("valorId").value
+let cadastrarDespesa = () =>{
+    let ano = document.getElementById("anoId").value;
+    let mes = document.getElementById("mesId").value;
+    let dia = document.getElementById("diaId").value;
+    let tipo = document.getElementById("tipoId").value;
+    let descricao = document.getElementById("descricaoId").value;
+    let valor = document.getElementById("valorId").value;
+
+    if(dia == 0 || dia > 31){
+        alert("por valor informe um dia válido!!!");
     }
-    
-    let getValores = new Despesa(
-        areaInput.ano,
-        areaInput.mes,
-        areaInput.dia,
-        areaInput.tipo,
-        areaInput.descricao,
-        areaInput.valor);
-    
-    bancoDeDados = new BancoDeDados();
-    
-    
-    // VALIDANDO DADOS RECEBIDOS
-    if(getValores.validarDados()){
-        bancoDeDados.setLocalStorage(getValores);
-        console.log(`Dados Válidos`);
-        alert(`Dados Válidos`);
-        
+
+    let despesa = new Despesas(ano,mes,dia,tipo,descricao,valor);
+    if(despesa.validarDados()){
+        // bd.gravar(despesa);
+        console.log(despesa);
+        alert("Despesa Cadastrada com sucesso!!!");
     }else{
-        console.log(`Dados Inválidos`)
-        alert(`Dados Inválidos`);
+        alert("Por favor preencha todos os campos!!!");
     }
+    
 }
 
 
-// CONSULTA
-let consultaLista = () =>{
-    let despesas = [];
-    despesas = bancoDeDados.consultaDadosLista();
+let carregaListaDespesas = () => {
+    let arrayDespesas = Array();
+    arrayDespesas = bd.recuperarTodosRegistros();
+    
+
     let listaDespesas = document.getElementById("listaDespesas");
+    
+    arrayDespesas.forEach(function(despesas){
+        let linha = listaDespesas.insertRow();
 
-    despesas.forEach(function(d){
-        // console.log(d);
-
-        // criando linha
-        let linha = listaDespesas.insertRow(0);
-
-        // criando colunas
-        linha.insertCell(0)
-        linha.insertCell(1)
-        linha.insertCell(2)
-        linha.insertCell(3)
+        linha.insertCell(0).innerHTML = `${despesas.dia}/${despesas.mes}/${despesas.ano}`;
+        linha.insertCell(1).innerHTML = despesas.tipo;
+        linha.insertCell(2).innerHTML = despesas.descricao;
+        linha.insertCell(3).innerHTML = despesas.valor;
     });
 }
